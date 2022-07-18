@@ -1,0 +1,31 @@
+﻿@model IEnumerable<Casino.Models.WheelNumber>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Roulette</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Wheel Numbers</th>
+
+            <th>Colour</th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @item.Number
+            </td>
+
+            <td>
+                @item.Color
+            </td>
+            
+        </tr>
+}
+    </tbody>
+</table>
