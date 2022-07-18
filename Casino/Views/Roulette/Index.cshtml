@@ -13,9 +13,17 @@
                 <ul>
                     @foreach (var item in Model)
                     {
-                    
-                     <WheelNumbComponent WheelNumber="@item.Number ">@item.Number</WheelNumbComponent>
+                     <li class="@item.Color.ToString().ToLower()"><span class="number">@item.Number</span>
+        
+                        @if (item.Selected)
+                        {
+
+                          <span class="ball-container"><span class="ball"></span></span>   
                         
+                        }
+ 
+                     </li>
+                     
                     }
                 </ul>
             </div>
